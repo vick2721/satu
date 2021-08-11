@@ -3,22 +3,15 @@ import pandas as pd
 import os
 import matplotlib.pyplot as plt
 import japanize_matplotlib
-#ros.chdir('C:\Users\kasei\新しいフォルダー\st')
-#from streamlit-pandas_profiling import stProfile
 
 st.title('欠品チェック app')
 
 data_file = st.file_uploader('Upload data',type=['xlsx','csv'])
 
-#st.beta_set_page_config(layout='wide')
-
 if data_file is not None :
     df = pd.read_excel(data_file,sheet_name='欠品データ')
 
 
-#df = pd.read_excel(r'C:\Users\kasei\Downloads\欠品チェック.xlsx',sheet_name='欠品データ')
-    
-    #sidebar
     col1 = st.sidebar
     col1.header('店舗名と日付を選択して下さい')
 
